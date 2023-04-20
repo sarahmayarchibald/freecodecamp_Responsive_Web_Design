@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA | Survey</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- <img src="img/spa.jpg" alt=""> -->
+    <img src="https://images.unsplash.com/photo-1547060037-a9b0a6be328c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2800&q=80" alt="">
+        <div class="container">
+            <div class="form-title">
+                <h1 id="title">Survey Form</h1>
+                <p id="description">Please take a few minute to answer our survey on your massage. Your feedback is greatly appreciated!</p>
+            </div>
+            
+            <form action="POST" id="survey-form">
+                <fieldset class="details">
+                    <!-- First Name -->
+                    <label for="name" class="required" id="name-label">First Name: </label>
+                    <input id="name" type="text" name="name" placeholder="required" required>
+                    <!-- Last Name -->
+                    <label for="last-name" class="required" >Last Name: </label>
+                    <input id="last-name" type="text" name="last-name" placeholder="required" required>
+                    <!-- Email -->
+                    <label for="email" class="required" id="email-label">Email: </label>
+                    <input id="email" type="email" name="email" placeholder="required" required>
+                    <!-- Phone number -->
+                    <label for="number" id="number-label">Phone: </label>
+                    <input id="number" type="number" name="number" placeholder="phone" min="5" max="20" pattern="[0-9]">
+                    <p>00xx (number)</p>
+                </fieldset>
+                <fieldset>
+                    <!-- Therapist Name -->
+                    <label for="dropdown">Who was your therapist?</label>
+                    <select name="therapist" id="dropdown">
+                        <option value="" selected>-- Choose Name --</option>
+                        <option value="andy">Andy</option>
+                        <option value="leila">Jamie</option>
+                        <option value="nic">Nic</option>
+                        <option value="taylor">Taylor</option>
+                        <option value="sam">Sam</option>
+                    </select>
+                    <!-- Massage Type -->
+                    <label for="massage">What massage did you have?</label>
+                    <select name="massage" id="massage">
+                        <option value="" selected>-- Choose Massage --</option>
+                        <option value="aroma">Aromatherapy</option>
+                        <option value="deep-tissue">Deep Tissue</option>
+                        <option value="prenatal">Prenatal</option>
+                        <option value="sports">Sports</option>
+                        <option value="swedish">Swedish</option>
+                        <option value="thai">Thai</option>
+                    </select>
+                    <!-- Massage duration -->
+                    <label for="time">What was the duration of your massage?</label>
+                    <select name="time" id="time">
+                        <option value="" selected>-- Select duration --</option>
+                        <option value="time30">30 minutes</option>
+                        <option value="time45">45 minutes</option>
+                        <option value="time60">60 minutes</option>
+                        <option value="time90">90 minutes</option>
+                        <option value="time120">120 minutes</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <!-- Massage aim -->
+                    <p>What areas you needed to focus on?</p>
+                    <label class="checkbox" for="hns">Head, Neck and Shoulders</label>
+                    <input class="checkbox" id="hns" type="checkbox" value="hns">
+                    <label class="checkbox" for="up-back">Upper back</label>
+                    <input class="checkbox" id="up-back" type="checkbox" value="up-back">
+                    <label class="checkbox" for="low-back">Lower back</label>
+                    <input class="checkbox" id="low-back" type="checkbox" value="low-back">
+                    <label class="checkbox" for="legs">Legs</label>
+                    <input class="checkbox" id="legs" type="checkbox" value="legs">
+                </fieldset>
+                <fieldset>
+                    <p>How would you rate your experience?</p>
+                    <label class="radio" for="very-satisfied">Very Satisfied</label>
+                    <input class="radio" id="very-satisfied" type="radio" value="very-satisfied" name="radio">
+                    <label class="radio" for="satisfied">Satisfied</label>
+                    <input class="radio" id="satisfied" type="radio" value="satisfied" name="radio">
+                    <label class="radio" for="neutral">Neutral</label>
+                    <input class="radio" id="neutral" type="radio" value="neutral" name="radio">
+                    <label class="radio" for="unsatisfied">Unsatisfied</label>
+                    <input class="radio" id="unsatisfied" type="radio" value="unsatisfied" name="radio">
+                    <label class="radio" for="very-unsatisfied">Very Unsatisfied</label>
+                    <input class="radio" id="very-unsatisfied" type="radio" value="very-unsatisfied" name="radio">
+                </fieldset>
+                <fieldset>
+                    <label for="feedback">Any further feedback?</label>
+                    <textarea name="feedback" id="feedback" cols="40" rows="5"></textarea>
+                    <input class="btn" type="submit" value="Submit" id="submit">
+                </fieldset>
+
+            </form>
+        </div>
+
+</body>
+</html>
